@@ -15,9 +15,9 @@ public class StudentConfiguration {
     @Bean
     public CommandLineRunner commandLineRunner(StudentRepository studentRepository) {
         return args -> studentRepository.saveAll(Arrays.asList(
-                new Student("Alex", LocalDate.now().minusDays(25).minusYears(18)),
-                new Student("Tom", LocalDate.now().minusDays(27).minusYears(25)),
-                new Student("John", LocalDate.now().minusDays(3).minusYears(7))
+                new Student("Alex", "alex@gmail.com", LocalDate.now().minusDays(25).minusYears(18)),
+                new Student("Tom", "tom@gmail.com", LocalDate.now().minusDays(27).minusYears(25)),
+                new Student("John", "john@gmail.com", LocalDate.now().minusDays(3).minusYears(7))
         ));
     }
 }

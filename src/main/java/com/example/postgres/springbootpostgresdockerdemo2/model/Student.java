@@ -21,10 +21,15 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "student_sequence")
     private Long id;
     private String name;
+
+    @Column(unique = true)
+    private String email;
+
     private LocalDate dob;
 
-    public Student(String name, LocalDate dob) {
+    public Student(String name, String email, LocalDate dob) {
         this.name = name;
+        this.email = email;
         this.dob = dob;
     }
 

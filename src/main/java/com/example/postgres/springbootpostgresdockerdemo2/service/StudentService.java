@@ -2,6 +2,7 @@ package com.example.postgres.springbootpostgresdockerdemo2.service;
 
 import com.example.postgres.springbootpostgresdockerdemo2.model.Student;
 import com.example.postgres.springbootpostgresdockerdemo2.repository.StudentRepository;
+import com.example.postgres.springbootpostgresdockerdemo2.response.ForbiddenException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -20,6 +21,9 @@ public class StudentService {
     }
 
     public void add(Student student) {
+        if (studentRepository.findStudentByEmail(student.getEmail()).isPresent()){
+            throw new ForbiddenException("Email is busy");
+        }
         studentRepository.save(student);
     }
 
