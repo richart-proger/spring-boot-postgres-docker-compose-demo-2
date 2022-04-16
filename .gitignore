@@ -31,4 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
+
 /my-docker-materials/
+/src/main/docker/spring-boot-postgres-docker-demo-2-0.0.1-SNAPSHOT.jar

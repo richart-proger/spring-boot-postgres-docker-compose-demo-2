@@ -13,7 +13,11 @@
   "servers": [
     {
       "url": "http://localhost:8080",
-      "description": "Generated server url"
+      "description": "Local api server url"
+    },
+    {
+      "url": "http://localhost:7070",
+      "description": "Docker container api server url"
     }
   ],
   "paths": {
