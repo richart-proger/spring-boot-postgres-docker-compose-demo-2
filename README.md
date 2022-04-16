@@ -33,7 +33,9 @@ docker-compose up
 7. Choose a suitable url:
 
 ![img.png](img.png)
+
 8. To stop the application, use Ctrl + C in the terminal.
+
 9. Stop containers:
 ```bash
 docker-compose down
