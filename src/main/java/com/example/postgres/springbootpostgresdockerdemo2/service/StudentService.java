@@ -40,6 +40,9 @@ public class StudentService {
             if (student.getDob() != null) {
                 updated.setDob(student.getDob());
             }
+            if(student.getEmail() != null) {
+                updated.setEmail(student.getEmail());
+            }
             studentRepository.save(updated);
         }
     }
